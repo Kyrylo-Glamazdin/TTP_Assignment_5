@@ -1,3 +1,4 @@
+
 .dark-nav {
 	height: 8vh;
 	background: linear-gradient(#0e033b, #1d2e66);
@@ -17,7 +18,9 @@
 }
 
 .nav-elem {
+	color: #7f9ac7;
 	margin: 0 5px;
 	width: 80px;
 	height: 100%;
+	text-align: center;
 }
