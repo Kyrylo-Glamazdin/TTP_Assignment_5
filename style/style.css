@@ -8,3 +8,14 @@
 	background: linear-gradient(#0e033b, #080124);
 	height: 95vh;
 }
+
+.square {
+  height: 50px;
+  width: 50px;
+  background-color: #E5E1FF;
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
