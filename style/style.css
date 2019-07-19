@@ -5,22 +5,39 @@
 	padding: 0 30px;
 }
 
-.dark {
-	background: linear-gradient(#0e033b, #080124);
-	height: 92vh;
-}
-
-.dark-btn {
-	background: #294d87;
-	border: 0;
-	color: #7f9ac7;
-	text-shadow: 1px 1px #6a7c99;
-}
-
 .nav-elem {
 	color: #7f9ac7;
 	margin: 0 5px;
 	width: 80px;
 	height: 100%;
 	text-align: center;
+}
+
+.dark {
+	background: #141a24;
+	height: 92vh;
+}
+
+.dark-btn {
+	background: #294d87;
+	border: 0;
+	color: #0b1629;
+	text-shadow: 1px 1px #6a7c99;
+}
+
+.canvas {
+	padding: 15px;
+	height: 100%
+}
+
+td {
+	width: 50px;
+	height: 50px;
+	background: radial-gradient(#afbdcc,#bfc3c7);
+	border: 5px solid;
+	border-color: #141a24;
+}
+
+tr {
+	border-top: #141a24;
 }
