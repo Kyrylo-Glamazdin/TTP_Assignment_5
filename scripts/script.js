@@ -1,7 +1,10 @@
 function addCol(){
 	let rows = document.getElementsByTagName("tr");
 	for (let i = 0; i < rows.length; i++){
-		var cell = document.createElement("td");
+		let cell = document.createElement("td");
+        cell.addEventListener("click", function(){
+                              console.log("clicked");
+                              this.style.backgroundColor = "red";});
 		rows[i].appendChild(cell);
 	}
 }
@@ -21,7 +24,11 @@ function addRow() {
 	let newRow = document.createElement("tr");
 
 	for (let i = 0; i < numcols; i++) {
-		newRow.appendChild(document.createElement("td"));
+		let cell = document.createElement("td");
+        cell.addEventListener("click", function(){
+                              console.log("clicked");
+                              this.style.backgroundColor = "red";});
+        newRow.appendChild(cell);
 	}
 
 	table.appendChild(newRow);
@@ -39,4 +46,8 @@ window.onload = function(){
     for (let i = 0; i < 5; i++){
         addCol();
     }
+    document.querySelectorAll("#table1 td").forEach(e => e.addEventListener("click", function(){
+            console.log("clicked");
+            this.style.backgroundColor = "red";
+            }));
 }
