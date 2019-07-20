@@ -1,15 +1,31 @@
+
 .dark-nav {
-	height: 5vh;
+	height: 8vh;
 	background: linear-gradient(#0e033b, #1d2e66);
-	padding: 20px;
+	padding: 0 30px;
 }
 
 .dark {
 	background: linear-gradient(#0e033b, #080124);
-	height: 95vh;
+	height: 92vh;
 }
 
-.square {
+.dark-btn {
+	background: #294d87;
+	border: 0;
+	color: #7f9ac7;
+	text-shadow: 1px 1px #6a7c99;
+}
+
+.nav-elem {
+	color: #7f9ac7;
+	margin: 0 5px;
+	width: 80px;
+	height: 100%;
+	text-align: center;
+}
+
+td {
   height: 50px;
   width: 50px;
   background-color: #E5E1FF;
@@ -18,4 +34,8 @@
   margin-bottom: 5px;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+tr {
+	background-color: gray;
 }
