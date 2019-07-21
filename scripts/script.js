@@ -54,17 +54,14 @@ function remRow(){
 }
 
 window.onload = function(){
-    for (let i = 0; i < 5; i++){
+    for (let i = 0; i < 6; i++){
         addRow();
     }
-    for (let i = 0; i < 5; i++){
-        addCol();
-    }
-    document.querySelectorAll("#table1 td").forEach(e => e.addEventListener("click", function(){
-            console.log("clicked");
-            this.style.backgroundColor = currentColor;
-            }));
     document.getElementById("redButton").style.backgroundColor = "#E5E1FF";
+    document.getElementsByClassName("dark")[0].addEventListener("mousedown", function () { isDrawing = true; });
+    document.getElementsByClassName("dark")[0].addEventListener("mouseup", function () { isDrawing = false; });
+    document.getElementById("navSection").addEventListener("mousedown", function () { isDrawing = true; });
+    document.getElementById("navSection").addEventListener("mouseup", function () { isDrawing = false; });
 }
 
 function clearColors(){
