@@ -52,6 +52,7 @@ window.onload = function(){
             console.log("clicked");
             this.style.backgroundColor = currentColor;
             }));
+    document.getElementById("redButton").style.backgroundColor = "#E5E1FF";
 }
 
 function clearColors(){
@@ -63,16 +64,46 @@ function clearColors(){
 
 function changeColorToBlue(){
     currentColor = "blue";
+    let colorButtons = document.getElementsByClassName("dropdown-item");
+    for (let i = 0; i < colorButtons.length; i++){
+        colorButtons[i].style.backgroundColor = "white";
+    }
+    document.getElementById("blueButton").style.backgroundColor = "#E5E1FF";
 }
 
 function changeColorToGreen(){
     currentColor = "green";
+    let colorButtons = document.getElementsByClassName("dropdown-item");
+    for (let i = 0; i < colorButtons.length; i++){
+        colorButtons[i].style.backgroundColor = "white";
+    }
+    document.getElementById("greenButton").style.backgroundColor = "#E5E1FF";
 }
 
 function changeColorToRed(){
     currentColor = "red";
+    let colorButtons = document.getElementsByClassName("dropdown-item");
+    for (let i = 0; i < colorButtons.length; i++){
+        colorButtons[i].style.backgroundColor = "white";
+    }
+    document.getElementById("redButton").style.backgroundColor = "#E5E1FF";
 }
 
 function changeColorToDefault(){
     currentColor = "#E5E1FF";
+    let colorButtons = document.getElementsByClassName("dropdown-item");
+    for (let i = 0; i < colorButtons.length; i++){
+        colorButtons[i].style.backgroundColor = "white";
+    }
+    document.getElementById("defaultButton").style.backgroundColor = "#E5E1FF";
+}
+
+function fillEmptyCells(){
+    let cells = document.getElementsByTagName("td");
+    for (let i = 0; i < cells.length; i++){
+        if (cells[i].style.backgroundColor != "red" && cells[i].style.backgroundColor != "green" &&
+                cells[i].style.backgroundColor != "blue"){
+            cells[i].style.backgroundColor = currentColor;
+        }
+    }
 }
