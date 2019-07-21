@@ -20,11 +20,16 @@ function remCol(){
 
 function addRow() {
     console.log("addRow called");
-	let table = document.getElementById("table1");
-	let numcols = document.getElementsByTagName("tr")[0].getElementsByTagName("td").length;
+    let table = document.getElementById("table1");
+
+    let numcols = 0
+    if (document.getElementsByTagName("tr")[0]) {
+        numcols = document.getElementsByTagName("tr")[0].getElementsByTagName("td").length;
+    } else {
+        numcols = 6;
+    }
 
 	let newRow = document.createElement("tr");
-
 	for (let i = 0; i < numcols; i++) {
 		let cell = document.createElement("td");
         cell.addEventListener("click", function(){
