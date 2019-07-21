@@ -1,12 +1,16 @@
 let currentColor = "red";
+let isDrawing = false;
 
 function addCol(){
 	let rows = document.getElementsByTagName("tr");
 	for (let i = 0; i < rows.length; i++){
 		let cell = document.createElement("td");
-        cell.addEventListener("click", function(){
-                              console.log("clicked");
-                              this.style.backgroundColor = currentColor;});
+		cell.addEventListener("mousedown", function () { isDrawing = true; });
+		cell.addEventListener("mouseover", function () {
+		    if (isDrawing)
+		    { this.style.backgroundColor = currentColor; }
+		});
+		cell.addEventListener("mouseup", function () { isDrawing = false; });
 		rows[i].appendChild(cell);
 	}
 }
@@ -31,10 +35,13 @@ function addRow(){
 
 	let newRow = document.createElement("tr");
 	for (let i = 0; i < numcols; i++) {
-		let cell = document.createElement("td");
-        cell.addEventListener("click", function(){
-                              console.log("clicked");
-                              this.style.backgroundColor = currentColor;});
+	    let cell = document.createElement("td");
+	    cell.addEventListener("mousedown", function () { isDrawing = true; });
+		cell.addEventListener("mouseover", function() {
+		    if (isDrawing)
+		    { this.style.backgroundColor = currentColor; }
+		});
+		cell.addEventListener("mouseup", function () { isDrawing = false; });
         newRow.appendChild(cell);
 	}
 
@@ -112,7 +119,6 @@ function fillEmptyCells(){
         }
     }
 }
-
 
 function fillAllCells(){
     let cells = document.getElementsByTagName("td");
