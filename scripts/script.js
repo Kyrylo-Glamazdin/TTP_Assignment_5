@@ -18,7 +18,7 @@ function remCol(){
     }
 }
 
-function addRow() {
+function addRow(){
     console.log("addRow called");
     let table = document.getElementById("table1");
 
@@ -110,5 +110,13 @@ function fillEmptyCells(){
                 cells[i].style.backgroundColor != "blue"){
             cells[i].style.backgroundColor = currentColor;
         }
+    }
+}
+
+
+function fillAllCells(){
+    let cells = document.getElementsByTagName("td");
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style.backgroundColor = currentColor;
     }
 }
