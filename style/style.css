@@ -6,7 +6,7 @@
 }
 
 .dark {
-	background: linear-gradient(#0e033b, #080124);
+	background: #0e033b;
 	height: 92vh;
 }
 
@@ -25,17 +25,20 @@
 	text-align: center;
 }
 
+.canvas {
+}
+
 td {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   background-color: #E5E1FF;
   float: left;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 tr {
-	background-color: gray;
+    background-color: #0e033b;
 }
