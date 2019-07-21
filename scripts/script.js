@@ -1,10 +1,12 @@
+let currentColor = "red";
+
 function addCol(){
 	let rows = document.getElementsByTagName("tr");
 	for (let i = 0; i < rows.length; i++){
 		let cell = document.createElement("td");
         cell.addEventListener("click", function(){
                               console.log("clicked");
-                              this.style.backgroundColor = "red";});
+                              this.style.backgroundColor = currentColor;});
 		rows[i].appendChild(cell);
 	}
 }
@@ -27,7 +29,7 @@ function addRow() {
 		let cell = document.createElement("td");
         cell.addEventListener("click", function(){
                               console.log("clicked");
-                              this.style.backgroundColor = "red";});
+                              this.style.backgroundColor = currentColor;});
         newRow.appendChild(cell);
 	}
 
@@ -48,7 +50,7 @@ window.onload = function(){
     }
     document.querySelectorAll("#table1 td").forEach(e => e.addEventListener("click", function(){
             console.log("clicked");
-            this.style.backgroundColor = "red";
+            this.style.backgroundColor = currentColor;
             }));
 }
 
@@ -57,4 +59,20 @@ function clearColors(){
     for (let i = 0; i < cells.length; i++){
         cells[i].style.backgroundColor = "#E5E1FF";
     }
+}
+
+function changeColorToBlue(){
+    currentColor = "blue";
+}
+
+function changeColorToGreen(){
+    currentColor = "green";
+}
+
+function changeColorToRed(){
+    currentColor = "red";
+}
+
+function changeColorToDefault(){
+    currentColor = "#E5E1FF";
 }
