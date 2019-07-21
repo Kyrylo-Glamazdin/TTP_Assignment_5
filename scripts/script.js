@@ -51,3 +51,10 @@ window.onload = function(){
             this.style.backgroundColor = "red";
             }));
 }
+
+function clearColors(){
+    let cells = document.getElementsByTagName("td");
+    for (let i = 0; i < cells.length; i++){
+        cells[i].style.backgroundColor = "#E5E1FF";
+    }
+}
