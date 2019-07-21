@@ -5,7 +5,9 @@ function addCol(){
 	let rows = document.getElementsByTagName("tr");
 	for (let i = 0; i < rows.length; i++){
 		let cell = document.createElement("td");
-		cell.addEventListener("mousedown", function () { isDrawing = true; });
+		cell.addEventListener("mousedown", function () { isDrawing = true;
+                              this.style.backgroundColor = currentColor;
+                              });
 		cell.addEventListener("mouseover", function () {
 		    if (isDrawing)
 		    { this.style.backgroundColor = currentColor; }
@@ -36,7 +38,9 @@ function addRow(){
 	let newRow = document.createElement("tr");
 	for (let i = 0; i < numcols; i++) {
 	    let cell = document.createElement("td");
-	    cell.addEventListener("mousedown", function () { isDrawing = true; });
+	    cell.addEventListener("mousedown", function () { isDrawing = true;
+                                                    this.style.backgroundColor = currentColor;
+                              });
 		cell.addEventListener("mouseover", function() {
 		    if (isDrawing)
 		    { this.style.backgroundColor = currentColor; }
