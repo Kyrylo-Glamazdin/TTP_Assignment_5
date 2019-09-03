@@ -32,7 +32,7 @@ function addRow(){
     if (document.getElementsByTagName("tr")[0]) {
         numcols = document.getElementsByTagName("tr")[0].getElementsByTagName("td").length;
     } else {
-        numcols = 6;
+        numcols = 53;
     }
 
 	let newRow = document.createElement("tr");
@@ -58,7 +58,7 @@ function remRow(){
 }
 
 window.onload = function(){
-    for (let i = 0; i < 6; i++){
+    for (let i = 0; i < 30; i++){
         addRow();
     }
     document.getElementById("redButton").style.backgroundColor = "#E5E1FF";
@@ -100,6 +100,33 @@ function changeColorToRed(){
         colorButtons[i].style.backgroundColor = "white";
     }
     document.getElementById("redButton").style.backgroundColor = "#E5E1FF";
+}
+
+function changeColorToBlack(){
+    currentColor = "black";
+    let colorButtons = document.getElementsByClassName("dropdown-item");
+    for (let i = 0; i < colorButtons.length; i++){
+        colorButtons[i].style.backgroundColor = "white";
+    }
+    document.getElementById("blackButton").style.backgroundColor = "#E5E1FF";
+}
+
+function changeColorToGrey(){
+    currentColor = "grey";
+    let colorButtons = document.getElementsByClassName("dropdown-item");
+    for (let i = 0; i < colorButtons.length; i++){
+        colorButtons[i].style.backgroundColor = "white";
+    }
+    document.getElementById("greyButton").style.backgroundColor = "#E5E1FF";
+}
+
+function changeColorToPink(){
+    currentColor = "pink";
+    let colorButtons = document.getElementsByClassName("dropdown-item");
+    for (let i = 0; i < colorButtons.length; i++){
+        colorButtons[i].style.backgroundColor = "white";
+    }
+    document.getElementById("pinkButton").style.backgroundColor = "#E5E1FF";
 }
 
 function changeColorToDefault(){

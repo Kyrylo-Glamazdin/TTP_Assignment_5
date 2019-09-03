@@ -8,6 +8,7 @@
 .dark {
 	background: #0e033b;
 	height: 92vh;
+	padding: 20px 0;
 }
 
 .dark-btn {
@@ -29,16 +30,18 @@
 }
 
 td {
-  height: 60px;
-  width: 60px;
+  height: 15px;
+  width: 15px;
   background-color: #E5E1FF;
   float: left;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+  border: 1px dashed rgba(174, 111, 245, 0.4);
 }
 
 tr {
     background-color: #0e033b;
+}
+
+footer {
+	text-align: center;
+	color: #96aac8aa;
 }
